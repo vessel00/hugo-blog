@@ -1,0 +1,4 @@
+[submodule "content"]
+	path = content
+	url = https://github.com/0Vessel0/hugo-blog.git
+	branch = md
