@@ -1,0 +1,80 @@
+.gate .links .item {
+    margin: 5px 0;
+    padding: 15px 1%;
+    float: left;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    height: 80px !important;
+    transition: .2s all;
+    opacity: .85;
+}
+
+.gate .links .item.akarin {
+    opacity: .58;
+}
+
+.gate .links .item:hover {
+    opacity: 1;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .25);
+    transform: translateY(-5px);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .28);
+    animation: index-link-active 1s cubic-bezier(.315, .605, .375, .925) forwards;
+    -webkit-animation: index-link-active 1s cubic-bezier(.315, .605, .375, .925) forwards
+}
+
+
+.gate .links .item .avatar {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 0 0 12px;
+    width: 60px;
+    border-radius: 100% 100% 100% 52%;
+    text-align: center;
+    margin-right: 12px;
+    background-color: #353535;
+    overflow: hidden;
+}
+
+.gate .links .item .avatar i {
+    font-size: 24px;
+}
+
+.gate .links .item .avatar img {
+    height: 60px;
+    max-width: 60px;
+}
+
+.gate .links .item .inner {
+    padding: 6px;
+}
+
+.gate .links .item .inner h5 {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.gate .links .item .inner p {
+    font-size: 13px;
+    color: hsla(0, 0%, 100%, .6);
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 20px 0;
+}
+
+img.medium-zoom-image{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.clear{
+    margin-top: 5em;
+}
