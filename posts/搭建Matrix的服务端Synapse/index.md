@@ -23,7 +23,11 @@ draft: false
 
 ## 安装
 
-下面开始正式搭建过程。**以下命令如无特殊说明，均以 root 用户身份运行。若非 root 用户请自行在每条命令前面加上 sudo**。
+下面开始正式搭建过程。
+
+{{< alert cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
+本文所有命令如无特别说明，请以 root 用户身份运行。
+{{< /alert >}}
 
 ### PostgreSQL 的安装
 

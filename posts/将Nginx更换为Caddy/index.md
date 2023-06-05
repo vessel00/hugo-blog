@@ -84,7 +84,9 @@ xcaddy version
 
 #### 编译安装
 
-若是不喜欢 `apt` 安装，可以在<https://github.com/caddyserver/xcaddy/releases>下载对应的包，自行编译安装。
+若是不喜欢 `apt` 安装，可以在
+{{< github repo="caddyserver/xcaddy" >}}
+的releases中下载对应的包，自行编译安装。
 
 #### Go 安装
 
