@@ -1,10 +1,10 @@
 name: CF Pages
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - md  # Set a branch to deploy
+  workflow_dispatch:
 
 jobs:
   
