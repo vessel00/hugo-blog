@@ -3,7 +3,7 @@ name: CF Pages
 on:
   push:
     branches:
-      - md  # Set a branch to deploy
+      - 'md'
   workflow_dispatch:      
 
 jobs:
