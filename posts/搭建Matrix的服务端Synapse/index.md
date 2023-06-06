@@ -152,7 +152,7 @@ server name 是服务器的唯一标识，还会影响到在你的服务器上�
 
 然后终于来到了本文重头戏，配置 Synapse，**大坑**。
 
-配置 Synapse 主要是配置位于 `/etc/matrix-synapse/` 的 `homeserver.yaml` 文件。**这里首先就有个坑**，按我找到的几篇中文教程的语境，貌似安装好 Synapse 后会自动给一个非常详细的，很多注释项的 `homeserver.yaml`。但实际上我看到的 `homeserver.yaml` 是一个非常简陋的，并且不能投入使用的文件。有教程自行进行每一项的配置，但按我这个非常简陋的 `homeserver. yaml` ，每一项都需要去对着[官方的配置手册](https://matrix-org.github.io/synapse/latest/usage/configuration/config_documentation.html)自己添加，这也太麻烦了，而且官方文档写的也不是很出色，缺少实例，自己对着写出问题概率很高。但其实直接使用官方的生成配置文件功能即可解决这个问题。
+配置 Synapse 主要是配置位于 `/etc/matrix-synapse/` 的 `homeserver.yaml` 文件。**这里首先就有个坑**，按我找到的几篇中文教程的语境，貌似安装好 Synapse 后会自动给一个非常详细的，很多注释项的 `homeserver.yaml`。但实际上我看到的 `homeserver.yaml` 是一个非常简陋的，并且不能投入使用的文件。有教程自行进行每一项的配置，但按我这个非常简陋的 `homeserver. yaml` ，每一项都需要去对着[官方的配置手册](https://matrix-org.github.io/synapse/latest/usage/configuration/config_documentation.html) 自己添加，这也太麻烦了，而且官方文档写的也不是很出色，缺少实例，自己对着写出问题概率很高。但其实直接使用官方的生成配置文件功能即可解决这个问题。
 
 首先来到 `/etc/matrix-synapse/` 下，把原本的 `homeserver.yaml` 删了，然后运行以下命令：
 
