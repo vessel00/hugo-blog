@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - md  # Set a branch to deploy
-  workflow_dispatch:
 
 jobs:
   
