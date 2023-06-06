@@ -2,8 +2,6 @@ name: CF Pages
 
 on:
   push:
-    branches:
-      - 'md'
   workflow_dispatch:      
 
 jobs:
