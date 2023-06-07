@@ -378,7 +378,7 @@ Systemctl status caddy
 
 ## 后记
 
-Caddy 比起 Nginx+Certbot 简单了不止一点，属于是新手福音了。当初要是先看到 Caddy，建站时间肯定能省好几天。不过 Nginx+Certbot 也让我学到了不少东西就是了。提前上课，避免补课。如果你还在为 Nginx 的配置和 SSL 证书烦恼，不妨也来试试 Caddy。
+Caddy 比起 Nginx + Certbot 简单了不止一点，属于是新手福音了。当初要是先看到 Caddy，建站时间肯定能省好几天。不过 Nginx+Certbot 也让我学到了不少东西就是了。提前上课，避免补课。如果你还在为 Nginx 的配置和 SSL 证书烦恼，不妨也来试试 Caddy。
 
 ## 参考文章
 
