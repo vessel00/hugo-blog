@@ -2,7 +2,7 @@
 title: "搭建Matrix的服务端Synapse"
 date: 2023-04-28T14:37:56+08:00
 tags : ["Matrix", "Synapse", "PostgreSQL"]
-categories : ["有趣的小东西"]
+categories : ["有趣的东西"]
 draft: false
 ---
 
