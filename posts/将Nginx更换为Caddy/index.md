@@ -178,7 +178,7 @@ touch Caddyfile
     } # 将所有http请求重定向为https请求
 ```
 
-关于防止证书泄露源站 IP，具体请看[从零开始的建站记#防止证书泄露源站IP](https://myvessel.top/posts/将nginx更换为caddy/#简单上手-caddyfile)
+关于防止证书泄露源站 IP，具体请看[从零开始的建站记#防止证书泄露源站IP](https://b.myvessel.top/posts//从零开始的建站记#防止证书泄露源站-ip)
 
 ```nginx.conf
 upstream halo {

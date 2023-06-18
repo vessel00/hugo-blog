@@ -11,12 +11,11 @@ showReadingTime: false
 ---
 
 <link rel="stylesheet" href="./css/links.css">
-<link rel="stylesheet" href="./css/font-awesome-animation.min.css">
 
 <div class="gate ch">
 	<div class="container links">
-		<h2 class="chtitle"><center>一直以来都非常感谢</center></h2>
-		<h2 class="chtitle"><center>从今往后也请多关照</center></h2>
+		<h2 class="chtitle">一直以来都非常感谢</h2>
+		<h2 class="chtitle">从今往后也请多关照</h2>
 		<div class="clear">
 			<a href="https://cafe.ski/" target="_blank">
 				<div class="item">
