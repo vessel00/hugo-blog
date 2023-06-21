@@ -13,9 +13,7 @@ showReadingTime: false
 
 {{< timelineItem icon="star" subheader="2023-04-03 23:06">}}
 第一篇文章完成，正式开始运营。
-{{< /timelineItem >}}
-
-
+{{< /timelineItem >}} 
 
 
 {{< /timeline >}}
