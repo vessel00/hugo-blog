@@ -17,14 +17,14 @@ showReadingTime: false
 		<h2 class="chtitle">一直以来都非常感谢</h2>
 		<h2 class="chtitle">从今往后也请多关照</h2>
 		<div class="clear">
-			<a href="https://cafe.ski/" target="_blank">
+			<a href="https://ena.sh/" target="_blank">
 				<div class="item">
 					<div class="avatar">
 						<img src="./img/naine.jpg">
 					</div>
 					<div class="inner">
-						<h5>Naine</h5>
-						<p>YOU KNOW</p>
+						<h5>ENAINE</h5>
+						<p>そのとおりです！</p>
 					</div>
 				</div>
 			</a>
