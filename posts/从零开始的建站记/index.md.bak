@@ -261,11 +261,11 @@ Ssl_prefer_server_ciphers on;
 表格里也说了，本站现在选用的是 Halo 框架搭建。虽然很想详细说说，但具体安装方式[官方文档](https://docs.halo.run/category/安装指南)已经写的很清楚了，不再赘述。需要注意的是`halo. External-url`一定要填写为自己的域名，否则后续使用会有奇奇怪怪的问题。Docker-compose 的安装也可以较为方便地使用如下命令：
 
 ```bash
-sudo apt  install docker. Io -y
+Sudo apt  install docker. Io -y
 curl -L " https://github.com/docker/compose/releases/latest/download/docker-compose-$ (uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-chmod a+x /usr/local/bin/docker-compose
-ln -s /usr/local/bin/docker-compose /usr/bin/dc
-dc -v
+Chmod a+x /usr/local/bin/docker-compose
+Ln -s /usr/local/bin/docker-compose /usr/bin/dc
+Dc -v
 ```
 
 [出处](https://llmkira.github.io/Docs/guide/docker)为与本文毫不相干的 OpenaiBot 安装教程，感谢作者。
