@@ -247,7 +247,7 @@ www.myvessel.top, myvessel.top { # 注释1
 
 注释 1：此行大括号的前缀即为地址 (address)，可以理解为 Nginx 中 server 块中的 `server_name`。
 
-什么？你问 SSL 证书相关配置去哪了？Http 重写到 https 又去哪了？防止证书泄露源站 ip 的配置呢？
+什么？你问 SSL 证书相关配置去哪了？http 重写到 https 又去哪了？防止证书泄露源站 ip 的配置呢？
 
 答案是不需要了，Caddy 已经默认帮你配置好了。默认全站 https (即自带 http 重写到 https，并自动申请证书，自动配置证书)，在[从零开始的建站记#防止证书泄露源站IP](https://myvessel.top/posts/将nginx更换为caddy/#简单上手-caddyfile) 中有提到 Nginx 1.19.4 以上给出了 `ssl_reject_handshake` 这个选项，Caddy 相当于默认启用了 `ssl_reject_handshake`，避免了因为证书泄露源站 IP。如果有需要当然可以对着官方文档自己动手调整相关配置。但如果没有精力做这些，直接开箱即用即可，非常舒畅简便。
 
@@ -258,7 +258,7 @@ www.myvessel.top, myvessel.top { # 注释1
 - `reverse_proxy`：即反向代理，与 Nginx 中 server 块中的 `location / {}` 类似。
 - `root`：与 Nginx 中 server 块中的 `root` 类似。可以换一行加上 `file_server` 表示提供静态文件服务器，加上 `php_fastcgi [以及后续参数]` 提供 PHP 服务。
 后两种是对访问 URI 进行操作。
-- `redi`：将请求 URI 重定向至某个 URI。
+- `redir`：将请求 URI 重定向至某个 URI。
 - `rewrite`：将请求 URI 重写至某个 URI。与 `redi` 的不同之处在于使用 `rewrite` 时请求客户端显示的 URI 不变，重写是在内部进行的。而 `redi` 会让客户端的 URI 一起变化。
 
 也就是说，Caddy 的自动 https 重写，实际上是用 redir 完成的，相当于在每个站点配置中加入了如下字段：
@@ -267,7 +267,7 @@ www.myvessel.top, myvessel.top { # 注释1
 	@http {
 		Protocol http
 	}
-	Redir @http https://{host}{uri}
+	redir @http https://{host}{uri}
 ```
 
 其中@开头前缀的大括号作用是定义匹配器，可以实现复杂的匹配功能，以供调用。
@@ -276,8 +276,8 @@ www.myvessel.top, myvessel.top { # 注释1
 若是想开启 http 3，可在全局配置 (即第一个没有前缀的大括号)中加入如下字段：
 
 ```Caddyfile
-Servers : 443 {
-	protocols h 1 h 2 h 3 #也可以只写h3 ，表示只允许 http 3 连接，不过兼容性就不能保证了
+servers : 443 {
+	protocols h1 h2 h3 #也可以只写 h3，表示只允许 http3 连接，不过兼容性差
 }
 ```
 
@@ -288,7 +288,7 @@ Servers : 443 {
 写好了 Caddyfile，自然不能直接启用，要先测试一下有没有问题。官方给出了如下命令用来测试：
 
 ```bash
-Caddy validate
+caddy validate
 ```
 
 效果对应 Nginx 的`nginx -t`。~~感觉... 不如`nginx -t`... 简洁~~默认在 caddy 二进制文件所在目录下寻找 Caddyfile，若 Caddyfile 在别处可在命令后加入`--config /Caddyfile 的路径`。
@@ -296,7 +296,7 @@ Caddy validate
 事实上，自己编写的 Caddyfile 可能会有很多不规范的格式。若有强迫症，可在测试通过后使用官方给出的
 
 ```bash
-Caddy fmt --overwrite
+caddy fmt --overwrite
 ```
 
 来对 Caddyfile 内容进行格式化。
@@ -310,7 +310,7 @@ Caddy fmt --overwrite
 启动后，一开始是访问不了的，因为 Caddy 还在申请证书。等一会就可以访问了。日志中可以看到
 
 ```log
-Tls. Obtain certificate obtained successfully
+tls.obtain certificate obtained successfully
 ```
 
 的字样，说明证书申请成功了。
@@ -326,17 +326,17 @@ Tls. Obtain certificate obtained successfully
 首先确认 caddy 文件位于/usr/bin/下，或使用上文提到的软连接。然后添加用户组和用户：
 
 ```bash
-Groupadd --system caddy
-Useradd --system \
+groupadd --system caddy
+useradd --system \
 	--gid caddy \
 	--create-home \
 	--home-dir /var/lib/caddy \
 	--shell /usr/sbin/nologin \
 	--comment "Caddy web server" \
-	Caddy
+	caddy
 ```
 
-然后在/etc/systemd/system/下新建`caddy. Service`，在里面写入如下内容：
+然后在/etc/systemd/system/下新建`caddy.service`，在里面写入如下内容：
 
 ```caddy. Service
 [Unit]
@@ -362,7 +362,7 @@ AmbientCapabilities=CAP_NET_BIND_SERVICE
 WantedBy=multi-user. Target
 ```
 
-请仔细检查`ExecStart`和`ExecReload`中的路径是否符合自己实际情况，然后保存退出。
+请仔细检查`execStart`和`execReload`中的路径是否符合自己实际情况，然后保存退出。
 
 然后
 
