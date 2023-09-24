@@ -1,3 +1,11 @@
+---
+title: BanG Dream! It's MyGO!!!!! 追番记录"
+date: 2023-09-24T22:57:55+08:00
+tags : ["BanG Dream! It's MyGO!!!!!", "BanG Dream!", "It's MyGO!!!!!", "原创动画", "番剧"]
+categories : ["追番记录"]
+draft: false
+---
+
 ## 前言
 
 施工中
