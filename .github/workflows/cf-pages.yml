@@ -36,7 +36,7 @@ jobs:
       - name: Download theme
         run: |
           mkdir -p themes/blowfish
-          git clone --depth 1 https://github.com/0Vessel0/blowfish.git themes/blowfish
+          git clone --depth 1 https://github.com/nunocoracao/blowfish.git themes/blowfish
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
