@@ -2,3 +2,4 @@
 	path = content
 	url = git@github.com:0Vessel0/hugo-blog.git
 	branch = md
+	ignore = dirty
