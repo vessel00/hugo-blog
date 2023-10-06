@@ -1,4 +1,19 @@
 .thumbnail {
-    border-radius: 5px; 
-  }
+  border-radius: 5px; 
+}
 
+.tk-footer {
+  display: none;
+}
+
+.twikoo .tk-submit .el-textarea__inner {
+  min-height: 150px !important;
+}
+
+.el-button--small {
+  border-radius: 5px !important;
+}
+
+.el-button {
+  border: 0 !important;
+}
