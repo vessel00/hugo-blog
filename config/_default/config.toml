@@ -16,6 +16,8 @@ buildFuture = false
 
 hasCJKLanguage = true
 
+timeout = "5m"
+
 # googleAnalytics = "G-XXXXXXXXX"
 
 [imaging]
