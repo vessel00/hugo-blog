@@ -16,7 +16,7 @@ buildFuture = false
 
 hasCJKLanguage = true
 
-timeout = "5m"
+timeout = "10m"
 
 # googleAnalytics = "G-XXXXXXXXX"
 
