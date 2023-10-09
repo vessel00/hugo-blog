@@ -324,4 +324,4 @@ Branch: master
 
 感谢建站过程中参考过的所有文章的作者们。
 
-[naine]: https://naine.cc
+[naine]: https://ena.sh

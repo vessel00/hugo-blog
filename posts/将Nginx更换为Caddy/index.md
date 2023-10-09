@@ -392,4 +392,4 @@ Caddy 比起 Nginx + Certbot 简单了不止一点，属于是新手福音了。
 
  
 
-[naine]: https://naine.cc
+[naine]: https://ena.sh
