@@ -152,15 +152,15 @@ Service crond restart
 在 Nginx 对应的 server 块中添加如下内容即可成功配置 SSL 证书。`server_name`，`ssl_certificate`和`ssl_certificate_key`请根据实际情况修改。
 
 ```conf
-Listen       443 ssl http 2;
-Listen       [::]: 443 ssl http 2;
-Server_name  _
-Ssl_certificate /etc/letsencrypt/live/域名/fullchain. Pem;
-Ssl_certificate_key /etc/letsencrypt/live/域名/privkey. Pem;
-Ssl_session_timeout 5 m;
-Ssl_protocols TLSv 1.1 TLSv 1.2 TLSv 1.3;
-Ssl_ciphers ECDHE-RSA-AES 128-GCM-SHA 256:HIGH:! ANULL:! MD 5:! RC 4:! DHE;
-Ssl_prefer_server_ciphers on;
+listen       443 ssl http2;
+listen       [::]:443 ssl http2;
+server_name  _
+ssl_certificate /etc/letsencrypt/live/域名/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/域名/privkey.pem;
+ssl_session_timeout 5m;
+ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
+ssl_ciphers ECDHE-RSA-AES 128-GCM-SHA 256:HIGH:!ANULL:!MD5:!RC4:!DHE;
+ssl_prefer_server_ciphers on;
 ```
 
 ### 防止证书泄露源站 IP
@@ -258,7 +258,7 @@ Ssl_prefer_server_ciphers on;
 
 ### 使用 Halo 框架搭建博客
 
-表格里也说了，本站现在选用的是 Halo 框架搭建。虽然很想详细说说，但具体安装方式[官方文档](https://docs.halo.run/category/安装指南)已经写的很清楚了，不再赘述。需要注意的是`halo. External-url`一定要填写为自己的域名，否则后续使用会有奇奇怪怪的问题。Docker-compose 的安装也可以较为方便地使用如下命令：
+表格里也说了，本站现在选用的是 Halo 框架搭建。虽然很想详细说说，但具体安装方式[官方文档](https://docs.halo.run/category/安装指南)已经写的很清楚了，不再赘述。需要注意的是`halo.external-url`一定要填写为自己的域名，否则后续使用会有奇奇怪怪的问题。Docker-compose 的安装也可以较为方便地使用如下命令：
 
 ```bash
 sudo apt install docker.io -y
@@ -290,7 +290,7 @@ Branch: master
 ```yaml
 Deploy:  
 Type: git  
-Repo: https://[这里填你拿到的 token]@github. Com/用户名/用户名. Github. Io. Git 
+Repo: https://[这里填你拿到的 token]@github.com/用户名/用户名.github.io.git 
 Branch: master
 ```
 
