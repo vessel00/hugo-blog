@@ -31,3 +31,12 @@ textarea.el-textarea__inner {
 input.el-input__inner {
   background-color: rgba(65, 74, 110, 0.3) !important;
 }
+
+.tk-content img {
+  border-radius: 0.375rem !important;
+}
+
+.tk-tag-green {
+  border-radius: 5px !important;
+  border: 0 !important;
+}
