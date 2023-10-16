@@ -261,14 +261,14 @@ Ssl_prefer_server_ciphers on;
 表格里也说了，本站现在选用的是 Halo 框架搭建。虽然很想详细说说，但具体安装方式[官方文档](https://docs.halo.run/category/安装指南)已经写的很清楚了，不再赘述。需要注意的是`halo. External-url`一定要填写为自己的域名，否则后续使用会有奇奇怪怪的问题。Docker-compose 的安装也可以较为方便地使用如下命令：
 
 ```bash
-sudo apt  install docker. Io -y
-curl -L " https://github.com/docker/compose/releases/latest/download/docker-compose-$ (uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo apt install docker.io -y
+curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-Linux-x86_64 > /usr/local/bin/docker-compose
 chmod a+x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/dc
 dc -v
 ```
 
-[出处](https://llmkira.github.io/Docs/guide/docker)为与本文毫不相干的 OpenaiBot 安装教程，感谢作者。
+参考为与本文毫不相干的 [OpenaiBot 安装教程](https://llmkira.github.io/Docs/guide/docker) 以及 [烧饼博客](https://u.sb/debian-install-docker/)，感谢作者。
 
 另外，一般来说是建议选择框架的最新版本。截至撰写本文时 Halo 最新版本为 2.4.0。但是我很喜欢的~~本站现在~~的主题 [Sakura](https://github.com/LIlGG/halo-theme-sakura/tree/master) 现在还没有完全适配 Halo 2，许多功能有所缺失，所以我选择回到 Halo 1，等适配完全之后再迁移。Halo 的后台地址统一为` http://域名/console/` 。但 Halo 1 在初次进入页面时会有安装引导，安装完成就会自动进入后台，此时后台的地址为` http://域名/install#/` 。**但是！这个地址是一次性的！** 离开这个界面或者登录过期之后这个地址就进不去了。初次遇见令我百思不得其解，前台能正常访问但是后台进不去，并且也不是 Halo 2 一样的 console 进入。论坛和 issue 也没有类似问题，后来机缘巧合查到了一点线索，最后确定后台地址为` http://域名/admin#/`使用时只需要在后面加上admin即可进入 。听起来只是一个很滑稽的问题，但当时真的花费了我很多时间去寻找答案。现在的官方文档里也没有找到相关的说法。我觉得如果第一次搭建博客并选择使用 Halo 1 可能会跟我遇到一样的问题，所以在此记录一下。
 
@@ -321,6 +321,8 @@ Branch: master
 [诡异 YUM 问题: 无法找到(安装卸载)一个特定的包 - V2EX](https://v2ex.com/t/816495)
 
 [Docker | Openai Kira Org (llmkira.github.io)](https://llmkira.github.io/Docs/guide/docker)
+
+[Debian 12 / Ubuntu 22.04 安装 Docker 以及 Docker Compose 教程](https://u.sb/debian-install-docker/)
 
 感谢建站过程中参考过的所有文章的作者们。
 
