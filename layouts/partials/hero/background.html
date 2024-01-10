@@ -21,12 +21,12 @@
 {{ if $disableImageOptimization }}
     {{ with . }}
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(https://lp.ena.sh/r?uid=vessel&albumid=9&ttl={{ seq 300 | shuffle | first 1 }});">
+    style="background-image:url(https://co.yzk.ai/r/?album=Ny2&res=og&r={{ seq 300 | shuffle | first 1 }});">
     {{ end }}
 {{ else }}
     {{ with .Resize "1200x" }}
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(https://lp.ena.sh/r?uid=vessel&albumid=9&ttl={{ seq 300 | shuffle | first 1 }});">
+    style="background-image:url(https://co.yzk.ai/r/?album=Ny2&res=og&r={{ seq 300 | shuffle | first 1 }});">
     {{ end }}
 {{ end }}
 

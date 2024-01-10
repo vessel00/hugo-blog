@@ -45,11 +45,11 @@
     {{- with $featured -}}
     {{ if $disableImageOptimization }}
         {{ with . }}
-        <div class="{{ $articleImageClasses }}" style="background-image:url(https://lp.ena.sh/r?uid=vessel&albumid=9&ttl={{ seq 300 | shuffle | first 1 }});"></div>
+        <div class="{{ $articleImageClasses }}" style="background-image:url(https://co.yzk.ai/r/?album=Ny2&res=og&r={{ seq 300 | shuffle | first 1 }});"></div>
         {{ end }}
       {{ else }}
         {{ with .Resize "600x"  }}
-        <div class="{{ $articleImageClasses }}" style="background-image:url(https://lp.ena.sh/r?uid=vessel&albumid=9&ttl={{ seq 300 | shuffle | first 1 }});"></div>
+        <div class="{{ $articleImageClasses }}" style="background-image:url(https://co.yzk.ai/r/?album=Ny2&res=og&r={{ seq 300 | shuffle | first 1 }});"></div>
         {{ end }}
       {{ end }}
     {{- else -}}
