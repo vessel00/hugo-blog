@@ -1,8 +1,13 @@
 ---
-title: "将Nginx更换为Caddy"
+title: 将Nginx更换为Caddy
 date: 2023-04-04T16:20:55+08:00
-tags : ["SSL", "Nginx", "Caddy", "Debian"]
-categories : ["实用的东西"]
+tags:
+  - SSL
+  - Nginx
+  - Caddy
+  - Debian
+categories:
+  - 实用的东西
 draft: false
 ---
 

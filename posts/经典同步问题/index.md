@@ -68,7 +68,7 @@ consumer(){ //消费者进程
 
 解决该问题的代码如下：
 ```cpp
-semaphore plate=l, apple=0/ orange=0;
+semaphore plate=l, apple=0, orange=0;
 dad(){ //父亲进程
 	while(1){
 		prepare an apple;
@@ -151,7 +151,7 @@ reader(){ //读者进程
 ```cpp
 int count=0; //用于记录当前的读者数量
 semaphore mutex=l; //用于保护更新count变量时的互斥
-semaphore rw-1; //用于保证读者和写者互斥地访问文件
+semaphore rw=1; //用于保证读者和写者互斥地访问文件
 semaphore w=l; //用于实现“写优先”
 writer(){ //写者进程
 	while(1){
@@ -194,7 +194,7 @@ reader(){ //读者进程
 2. 整理思路。显然，这里有5个进程。本题的关键是如何让一名哲学家拿到左右两根筷子而不造成死锁或饥饿现象。解决方法有两个：一是让他们同时拿两根筷子；二是对每名哲学家的动作制定规则，避免饥饿或死锁现象的发生。
 3. 信号量设置。定义互斥信号量数组 $chopstick[5] = \{1, 1, 1, 1, 1\}$,用于对5个筷子的互斥访问。哲学家按顺序编号为0〜4,哲学家 i 左边筷子的编号为 i，哲学家右边筷子的编号为 $(i+1)\%5$。
 ```cpp
-semaphore chopstick[5] ={ 1,1,1,1,1}; //定义信号量数组 chopstick[5],并初始化
+semaphore chopstick[5] = { 1,1,1,1,1}; //定义信号量数组 chopstick[5],并初始化
 Pi(){ //i号哲学家的进程
 	do{
 		P(chopstick[i]); //取左边筷子
@@ -212,7 +212,7 @@ Pi(){ //i号哲学家的进程
 
 制定的正确规则如下：假设采用第二种方法，当一名哲学家左右两边的筷子都可用时，才允许他抓起筷子。
 ```cpp
-semaphore chopstick(5] = (1,1,1,1}; //初始化信号量
+semaphore chopstick(5] = {1,1,1,1}; //初始化信号量
 semaphore mutex=l; //设置取筷子的信号量
 Pi(){ //i号哲学家的进程
 	do{
