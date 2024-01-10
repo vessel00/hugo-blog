@@ -92,7 +92,7 @@ draft: false
 
 可以，但同上一条，只能是 Omnivore 作为发送方，本身不能接收 webhook。
 
-
+---
 
 另外，插件设置和 Omnivore 本身还有很多功能，具体请查看 [Omnivore 文档](https://docs.omnivore.app)。不要忘记这本身是一个稍后阅读方案，并不是书签。
 
