@@ -45,11 +45,11 @@
     {{- with $featured -}}
     {{ if $disableImageOptimization }}
         {{ with . }}
-        <div class="{{ $articleImageClasses }}" style="background-image:url(https://co.yzk.ai/r/?album=Ny2&res=og&r={{ seq 300 | shuffle | first 1 }});"></div>
+        <div class="{{ $articleImageClasses }}" style="background-image:url(https://co.yzk.ai/r/?album=Ny2&res=og&r={{ math.Rand | mul 100 | add 1 | int }});"></div>
         {{ end }}
       {{ else }}
         {{ with .Resize "600x"  }}
-        <div class="{{ $articleImageClasses }}" style="background-image:url(https://co.yzk.ai/r/?album=Ny2&res=og&r={{ seq 300 | shuffle | first 1 }});"></div>
+        <div class="{{ $articleImageClasses }}" style="background-image:url(https://co.yzk.ai/r/?album=Ny2&res=og&r={{ math.Rand | mul 100 | add 1 | int }});"></div>
         {{ end }}
       {{ end }}
     {{- else -}}
