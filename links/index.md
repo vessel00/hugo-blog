@@ -17,17 +17,6 @@ showReadingTime: false
 		<h2 class="chtitle">一直以来都非常感谢</h2>
 		<h2 class="chtitle">从今往后也请多关照</h2>
 		<div class="clear">
-			<a href="https://ena.sh/" target="_blank">
-				<div class="item">
-					<div class="avatar">
-						<img src="./img/naine.jpg">
-					</div>
-					<div class="inner">
-						<h5>ENAINE</h5>
-						<p>そのとおりです！</p>
-					</div>
-				</div>
-			</a>
 			<a href="http://HOPPOU-SeiKi.github.io/" target="_blank">
 				<div class="item">
 					<div class="avatar">
@@ -36,6 +25,22 @@ showReadingTime: false
 					<div class="inner">
 						<h5>HOPPOU-SeiKi</h5>
 						<p>邦德大手子</p>
+					</div>
+				</div>
+			</a>
+		</div>
+		<br>
+		<br>
+		<h2 class="chtitle">你猜我为什么放这🤗</h2>
+		<div class="clear">
+			<a href="https://ena.sh/" target="_blank">
+				<div class="item">
+					<div class="avatar">
+						<img src="./img/naine.jpg">
+					</div>
+					<div class="inner">
+						<h5>ENAINE</h5>
+						<p>そのとおりです！</p>
 					</div>
 				</div>
 			</a>
